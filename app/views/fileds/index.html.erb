@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fileds</h1>
+
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Company</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fileds.each do |filed| %>
+      <tr>
+        <td><%= filed.Service %></td>
+        <td><%= filed.Company %></td>
+        <td><%= filed.address %></td>
+        <td><%= filed.phone %></td>
+        <td><%= filed.website %></td>
+        <td><%= link_to 'Show', filed, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_filed_path(filed), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', filed, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Filed', new_filed_path, class: "btn btn-link" %>

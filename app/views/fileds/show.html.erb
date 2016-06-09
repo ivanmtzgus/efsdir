@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @filed.Service %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @filed.Company %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @filed.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @filed.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @filed.website %>
+</p>
+
+<%= link_to 'Edit', edit_filed_path(@filed), class: "btn btn-link" %> |
+<%= link_to 'Back', fileds_path, class: "btn btn-link" %>
